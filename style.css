@@ -1,0 +1,237 @@
+/* here we style the website by provding different features  */
+
+/* 1. making variables so that i can use them just by writing thier name */
+:root { 
+    --gradient: linear-gradient(
+      180deg,
+      rgba(45, 112, 1253, 0.73) 0%,
+      #163e92 100%
+    );
+    --dark: #001747;
+    --grey: #b1bacb;
+    --grey-border: rgba(210, 210, 210, 0.75);
+    --grey-light: #eeeeee;
+    --grey-dark: $405175;
+    --blue: #2d70fd;
+    --green: #00d8a7;
+    --white: #ffffff;
+  }
+  /*  */
+  /*2. styling overall web page like its background, margin, height,display etc */
+  body {
+    background: var(--gradient);
+
+    margin: 0;
+    /* occupies 100% of screen */
+    height: 100vh; 
+    /* display converts website into a flex container where now we can easily arrange the boxes and all */
+    display: flex;
+    /* arrabges the input section and madeby section verticaly */
+    flex-direction: column;
+    /* spaces the parts evenly */
+    justify-content: space-evenly;
+    /* aligns 2 sections at center */
+    align-items: center;
+  }
+  /* body section overall is over ..now take a specific part and style it */
+
+  /* 3. styling "Add" button */
+  
+  .btn {
+    /* adding color to text in button */
+    color: var(--white);
+    /* textsize of add button */
+    font-size: 1.1rem;
+    /* padding outside content */
+    padding: 0.7rem 1.5rem;
+    /* border radius makes the borders little round  */
+    border-radius: 0.5rem;
+    /* background color of box */
+    background-color: var(--blue);
+    /* border of box */
+    border: none;
+    /* brings it into inputtextbox */
+    position: absolute;
+    /* distance from borders of input text box */
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
+  /* "ADD" button is styled */
+
+  /* now styling the list section */
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+  
+  /* 4. Todo Container - contains all listed tasks */
+  
+  .todo {
+    /* converting into flex container */
+    display: flex;
+    /* column wise listing alogwith total taks and delete button */
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 2rem;
+    background: var(--white);
+    padding: 3rem;
+    height: 50%;
+    width: 60%;
+    box-shadow: 0 1rem 3rem 1rem rgba(0, 23, 71, 0.15);
+    max-width: 30rem;
+  }
+  /* "TO-DO LIST" is h2 section */
+  h2 {
+    text-transform: uppercase;
+    height:5rem;
+    color: var(--black);
+    text-align: center;
+  }
+  /* text input section */
+  .input {
+    position: relative;
+    display: flex;
+  }
+  /* text box styling */
+  .input-field {
+    width: 100%;
+    border: 0.06rem solid #d2d2d2bf;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    font-size: 1rem;
+  }
+  /* styling placeholder inside text input box */
+  input[type="text"]::placeholder {
+    color: var(--grey);
+  }
+  /* listed tasks */
+  .todo-container {
+    display: flex;
+    gap: 1rem;
+  }
+  /* list of tasks and adding scroll bar to it */
+  ul {
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+  }
+  /* overall  list styling */
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.3rem;
+  }
+  /* listed tasks styling */
+  #todoList p {
+    display: flex;
+    gap: 1rem;
+    color: var(--dark);
+    align-items: center;
+  }
+  /*  striking off the completed tasks*/
+  #todoList .disabled {
+    color: #8f98a8;
+  }
+  .disabled {
+    display: flex;
+    text-decoration: line-through;
+  }
+
+  /* input text box */
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+  }
+  /* before checking  */
+  input[type="checkbox"]::before {
+    content: "\2713";
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.7rem;
+    text-align: center;
+    border: 0.06rem solid var(--grey-border);
+    border-radius: 50%;
+    color: transparent;
+  }
+
+  /* after checking */
+  input[type="checkbox"]:checked::before {
+    color: var(--white);
+    background-color: var(--green);
+    border: 0.06rem solid var(--green);
+    border-radius: 50%;
+  }
+  /* separating section of list and delete button */
+  .counter {
+    border: 0.06rem solid var(--grey-border);
+  }
+  /*  items total button*/
+  .counter-container {
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    color: var(--dark);
+  }
+  /* level of items and delete all */
+  .counter-container p {
+    align-self: center;
+  }
+  
+  /* delete buton styling */
+  .counter-container button {
+    border: none;
+    background-color: transparent;
+    color: var(--dark);
+    font-size: 1rem;
+  }
+  
+  /* footer section ..made by rasheed */
+  .footer {
+    display: flex;
+    gap: 1.8rem;
+    background-color: var(--white);
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+  }
+  
+  .made-by,
+  .author {
+    font-size: 0.9rem;
+  }
+  
+  .made-by {
+    color: var(--grey-dark);
+  }
+  
+  .author {
+    color: var(--blue);
+    font-weight: bold;
+  }
+  /* scroll bar styling  */
+  .scroll {
+    height: 10rem;
+    scrollbar-width: thin;
+  }
+  
+  .scroll::-webkit-scrollbar {
+    width: 0.6rem;
+  }
+  
+  .scroll::-webkit-scrollbar-thumb {
+    background-color: var(--blue);
+    border-radius: 0.5rem;
+  }
+  
+  .scroll::-webkit-scrollbar-track {
+    display: none;
+  }

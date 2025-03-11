@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Todo</title>
+  </head>
+  <body>
+    <!-- making to sections 1.section and 2.footer and writing code in them -->
+    <section class="todo">
+        <!-- todo class is to take input, store it and refrsh on adding tasks diplays it -->
+        <!-- h2 tag is for headline -->
+      <h2>To-do list</h2> 
+      <!-- div tag takes the iput by providing a text bar and  a button to add new text-->
+      <div class="input">
+        <input
+          type="text"
+          class="input-field"
+          id="todoInput"
+          placeholder="Add a new todo"
+        />
+        <button class="btn">Add</button>
+      </div>
+      <!-- creating a list to display the list down tasks -->
+      <ul class="scroll">
+        <li id="todoList"></li>
+      </ul>
+      <!-- another div tag is used to count the number of tasks listed and also to provide delete all button -->
+      <div>
+        <hr class="counter" />
+        <div class="counter-container">
+          <p><span id="todoCount">0</span> items total</p>
+          <button id="deleteButton">Delete All</button>
+        </div>
+      </div>
+    </section>
+    <!-- in bottom most section we are just adding the developers name .thats all -->
+    <footer>
+      <div class="footer">
+        <p class="made-by">Made By</p>
+        <p class="author">Mohammad Rasheed</p>
+      </div>
+    </footer>
+    <!-- now i ahve to go foe styling the website using their ids and classes -->
+
+  </body>
+</html>
